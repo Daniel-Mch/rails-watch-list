@@ -1,5 +1,5 @@
 <div class="container">
-  <h2><%= @list.name %></h2>
+  <h1><%= @list.name %></h1>
 
 
 
@@ -13,6 +13,19 @@
       </div>
     <% end %>
   </div
+
+
+  <div class="cards-container d-flex justify-content-center">
+    <% @lists.each do |list|  %>
+      <%= link_to list_path(list) do  %>
+        <div class="card-category" >
+         <p>
+           <%= list.name %>
+         </p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
 
 
