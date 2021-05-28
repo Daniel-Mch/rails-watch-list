@@ -1,16 +1,17 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://di-uploads-pod7.s3.amazonaws.com/mercedesbenzburlingtonca/uploads/2016/08/q-theatre-banner.jpg);">
     <div class="container">
       <h1>Your Lists </h1>
+      <div>
+        <%= link_to "Create a List", new_list_path, class: "btn btn-flat" %>
+      </div>
     </div>
   </div>
 
 <div class="container">
 
-  <div>
-    <%= link_to "Create a List", new_list_path, class: "btn btn-flat" %>
-  </div>
 
-  <div class="cards-container d-flex justify-content-between padding-50px">
+
+  <div class="cards-container d-flex justify-content-center">
 
   <% @lists.each do |list|  %>
     <%= link_to list_path(list) do  %>
